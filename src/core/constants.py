@@ -1,0 +1,15 @@
+import torch
+
+EPSILON = 1e-6
+LAMBDA_P = 10.0
+LAMBDA_S = 5.0
+LAMBDA_CONE = 0.5
+TAU_TEMP = 0.1
+HORIZON_SCALE = 0.3
+
+LEVEL_TIMES = torch.tensor([1.0, 2.5, 4.0])
+BASE_HORIZONS = torch.tensor([0.90, 0.60, 0.30])
+
+K_NEIGHBORS = 5
+DIVERSITY_WEIGHT = 0.3
+GRAD_CLIP = 1.0
