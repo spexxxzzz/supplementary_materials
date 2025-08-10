@@ -1,0 +1,26 @@
+model:
+  name: loco
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 1024
+  learnable_times: false
+  encoder: vit_large
+  encoder_frozen: true
+
+training:
+  learning_rate: 0.003
+  batch_size: 32
+  epochs: 200
+  grad_clip: 1.0
+  diversity_weight: 0.3
+
+data:
+  dataset: kitti
+  split: train
+
+device: cuda
+mixed_precision: true
+num_workers: 16
+
+logging:
+  log_dir: ./logs_archive/foundation_vit

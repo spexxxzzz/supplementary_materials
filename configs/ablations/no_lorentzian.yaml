@@ -1,0 +1,15 @@
+model:
+  name: euclidean_worldline
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 32
+  learnable_times: false
+
+training:
+  learning_rate: 0.003
+  batch_size: 16
+  epochs: 300
+
+data:
+  dataset: toy
+  num_scenes: 1000

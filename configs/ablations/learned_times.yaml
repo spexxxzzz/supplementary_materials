@@ -1,0 +1,14 @@
+model:
+  name: loco
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 32
+  learnable_times: true
+
+training:
+  learning_rate: 0.003
+  batch_size: 16
+  epochs: 300
+
+data:
+  dataset: toy

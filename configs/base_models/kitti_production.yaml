@@ -1,0 +1,31 @@
+model:
+  name: loco
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 768
+  learnable_times: false
+  encoder: vit_base
+  encoder_frozen: true
+
+training:
+  learning_rate: 0.003
+  batch_size: 64
+  epochs: 250
+  grad_clip: 1.0
+  diversity_weight: 0.3
+  optimizer: adam
+  beta1: 0.9
+  beta2: 0.999
+
+data:
+  dataset: kitti
+  split: train
+  root_dir: /data/shared/kitti
+
+device: cuda
+mixed_precision: true
+num_workers: 8
+
+logging:
+  log_dir: ./logs_archive/2025-11-15_kitti_production
+  wandb_project: loco_kitti
