@@ -1,0 +1,19 @@
+model:
+  name: 'loco_lightweight'
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 32
+  learnable_times: False
+
+training:
+  learning_rate: 0.003
+  batch_size: 64
+  epochs: 300
+
+data:
+  dataset: 'clevr'
+  num_scenes: 1000
+  seed: 3
+
+device: cuda
+mixed_precision: true

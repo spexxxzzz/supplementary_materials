@@ -1,0 +1,22 @@
+model:
+  name: 'loco_lightweight'
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 32
+  learnable_times: False
+  input_dim: 2
+
+training:
+  learning_rate: 0.003
+  batch_size: 16
+  epochs: 300
+  grad_clip: 1.0
+  diversity_weight: 0.3
+
+data:
+  dataset: 'toy'
+  num_scenes: 1000
+  seed: 0
+
+device: cuda
+mixed_precision: true

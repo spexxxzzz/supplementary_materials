@@ -1,0 +1,24 @@
+model:
+  name: 'loco'
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 768
+  learnable_times: False
+  encoder: 'vit_base'
+  encoder_frozen: True
+
+training:
+  learning_rate: 0.003
+  batch_size: 64
+  epochs: 250
+  grad_clip: 1.0
+  diversity_weight: 0.3
+
+data:
+  dataset: 'kitti'
+  split: 'train'
+  root_dir: '/data/shared/kitti'
+  seed: 8
+
+device: cuda
+mixed_precision: true

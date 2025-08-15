@@ -1,0 +1,19 @@
+model:
+  name: 'coca_net'
+  num_slots: 9
+  hidden_dim: 768
+  encoder: 'vit_base'
+
+training:
+  learning_rate: 0.003
+  batch_size: 64
+  epochs: 250
+
+data:
+  dataset: 'coco'
+  split: 'train'
+  use_dinov2: True
+  seed: 6
+
+device: cuda
+mixed_precision: true
