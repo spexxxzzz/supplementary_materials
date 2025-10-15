@@ -1,0 +1,29 @@
+model:
+  name: LoCo
+  num_objects: 3
+  num_levels: 3
+  hidden_dim: 32
+  learnable_times: false
+
+training:
+  batch_size: 32
+  num_epochs: 250
+  optimizer: Adam
+  learning_rate: 0.0001
+  weight_decay: 1e-5
+  gradient_clip: 1.0
+
+loss:
+  reconstruction_weight: 1.0
+  diversity_weight: 0.3
+  lambda_cone: 0.5
+  cone_penalty: 0.4
+
+data:
+  dataset: KITTI-3DParts
+  root_dir: /mnt/raid0_data/neel/kitti_processed_v4/
+  train_split: 0.9
+
+logging:
+  log_dir: logs_archive/grid_search_lr
+  checkpoint_dir: checkpoints/grid_search_lr
