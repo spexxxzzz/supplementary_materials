@@ -1,12 +1,13 @@
+# FINAL VERSION (maybe?) - This might be the one we use for paper
+# Has all the fixes from the experimental branch
+# Still needs testing on full dataset
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from src.core.minkowski_ops import minkowski_inner_product, proper_time_distance, proper_time_distance_safe, minkowski_inner_product_einsum
 from src.core.light_cone import future_light_cone, cone_score, adaptive_horizon, cone_membership
 from src.core.constants import LEVEL_TIMES, BASE_HORIZONS, HORIZON_SCALE, LAMBDA_CONE, TAU_TEMP, EPSILON, LAMBDA_P, LAMBDA_S, K_NEIGHBORS, DIVERSITY_WEIGHT
-
-# TODO: Merge updates from v2_experimental and final_maybe
-# Need to consolidate the regularization losses and analysis methods
 
 class WorldlineBinding(nn.Module):
     def __init__(self, num_objects=3, num_levels=3, hidden_dim=32, learnable_times=False):
