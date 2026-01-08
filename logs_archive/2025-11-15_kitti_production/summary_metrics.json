@@ -1,0 +1,7 @@
+{
+  "total_runs": 25,
+  "successful": 24,
+  "failed": 1,
+  "avg_final_acc": 0.745,
+  "total_gpu_hours": 1720
+}
