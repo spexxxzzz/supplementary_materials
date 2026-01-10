@@ -42,7 +42,7 @@ data/processed/
 checkpoints/*.pth
 checkpoints/*.pt
 
-logs_archive/*/train_seed_*.log
-logs_archive/*/run_*.log
+# logs_archive/*/train_seed_*.log
+# logs_archive/*/run_*.log
 
 notebooks/.ipynb_checkpoints/
