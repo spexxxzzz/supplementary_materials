@@ -1,42 +1,73 @@
-Training started at 2026-01-30 00:44:03.297182
-Seed: 6
-Config: kitti_production.yaml
 ================================================================================
-Epoch   1/250 | Loss: 0.8957 | Level Acc: 0.7505 | Time: 153.6s
-Epoch   2/250 | Loss: 0.8888 | Level Acc: 0.7470 | Time: 120.3s
-Epoch   3/250 | Loss: 0.8663 | Level Acc: 0.7337 | Time: 158.3s
-Epoch   4/250 | Loss: 0.8683 | Level Acc: 0.7383 | Time: 125.3s
-Epoch   5/250 | Loss: 0.8657 | Level Acc: 0.7461 | Time: 142.8s
-Epoch  10/250 | Loss: 0.8132 | Level Acc: 0.7372 | Time: 164.4s
-Epoch  20/250 | Loss: 0.7421 | Level Acc: 0.7512 | Time: 173.9s
-Epoch  30/250 | Loss: 0.6651 | Level Acc: 0.7520 | Time: 144.3s
-Epoch  40/250 | Loss: 0.6112 | Level Acc: 0.7327 | Time: 153.2s
-Epoch  50/250 | Loss: 0.5495 | Level Acc: 0.7542 | Time: 159.5s
-  Checkpoint saved at epoch 50
-Epoch  60/250 | Loss: 0.5012 | Level Acc: 0.7595 | Time: 130.6s
-Epoch  70/250 | Loss: 0.4364 | Level Acc: 0.7510 | Time: 164.5s
-Epoch  80/250 | Loss: 0.4019 | Level Acc: 0.7639 | Time: 149.6s
-Epoch  90/250 | Loss: 0.3624 | Level Acc: 0.7684 | Time: 177.1s
-Epoch 100/250 | Loss: 0.3255 | Level Acc: 0.7641 | Time: 129.4s
-  Checkpoint saved at epoch 100
-Epoch 110/250 | Loss: 0.3015 | Level Acc: 0.7571 | Time: 167.5s
-Epoch 120/250 | Loss: 0.2685 | Level Acc: 0.7747 | Time: 152.1s
-Epoch 130/250 | Loss: 0.2338 | Level Acc: 0.7741 | Time: 129.7s
-Epoch 140/250 | Loss: 0.2236 | Level Acc: 0.7767 | Time: 176.6s
-Epoch 150/250 | Loss: 0.1963 | Level Acc: 0.7741 | Time: 141.4s
-  Checkpoint saved at epoch 150
-Epoch 160/250 | Loss: 0.1808 | Level Acc: 0.7676 | Time: 175.2s
-Epoch 170/250 | Loss: 0.1712 | Level Acc: 0.7800 | Time: 128.9s
-Epoch 180/250 | Loss: 0.1511 | Level Acc: 0.7800 | Time: 142.8s
-Epoch 190/250 | Loss: 0.1426 | Level Acc: 0.7800 | Time: 179.4s
-Epoch 200/250 | Loss: 0.1266 | Level Acc: 0.7800 | Time: 171.4s
-  Checkpoint saved at epoch 200
-Epoch 210/250 | Loss: 0.1040 | Level Acc: 0.7800 | Time: 170.9s
-Epoch 220/250 | Loss: 0.0931 | Level Acc: 0.7800 | Time: 139.2s
-Epoch 230/250 | Loss: 0.0861 | Level Acc: 0.7800 | Time: 176.1s
-Epoch 240/250 | Loss: 0.0747 | Level Acc: 0.7800 | Time: 164.6s
-Epoch 250/250 | Loss: 0.0730 | Level Acc: 0.7800 | Time: 123.6s
-  Checkpoint saved at epoch 250
+Training Log - Seed 6
+Started at: 2026-01-30 01:50:54.024751
 ================================================================================
-Training completed at 2026-01-30 00:44:03.297963
-Final Level Accuracy: 0.7514
+[INFO] Cluster Node: g8-node-04 | GPU: Tesla V100-SXM2-32GB
+[INFO] CUDA Version: 11.8 | PyTorch: 2.1.0+cu118
+[INFO] Model: LoCo (Production, 2.4M params)
+[INFO] Dataset: KITTI-3DParts | Train: 1842 | Val: 200
+[INFO] Batch Size: 32 | Learning Rate: 1e-4 | Optimizer: Adam
+[INFO] Loss: Reconstruction + Diversity (λ=0.3)
+
+Initializing model...
+Loading dataset...
+Starting training...
+
+Epoch   1/250 | Loss: 0.9638 | Level Acc: 0.7477 | ARI: 0.7902 | Time: 159.8s
+Epoch   2/250 | Loss: 0.9472 | Level Acc: 0.7461 | ARI: 0.8128 | Time: 166.2s
+Epoch   3/250 | Loss: 0.9536 | Level Acc: 0.7347 | ARI: 0.8344 | Time: 144.8s
+Epoch   4/250 | Loss: 0.9338 | Level Acc: 0.7464 | ARI: 0.8024 | Time: 153.2s
+Epoch   5/250 | Loss: 0.9436 | Level Acc: 0.7437 | ARI: 0.8392 | Time: 161.1s
+Epoch  10/250 | Loss: 0.9143 | Level Acc: 0.7460 | ARI: 0.8307 | Time: 161.9s
+Epoch  20/250 | Loss: 0.8556 | Level Acc: 0.7522 | ARI: 0.8342 | Time: 173.4s
+  [GRAD] Gradient norm: 0.8821
+Epoch  30/250 | Loss: 0.7663 | Level Acc: 0.7503 | ARI: 0.8253 | Time: 167.6s
+Epoch  40/250 | Loss: 0.7135 | Level Acc: 0.7579 | ARI: 0.8351 | Time: 174.7s
+Epoch  50/250 | Loss: 0.6540 | Level Acc: 0.7570 | ARI: 0.8047 | Time: 163.9s
+  [CHECKPOINT] Saved at epoch 50
+  [METRICS] Level Accuracy: 0.7570 | ARI: 0.8047
+  [GRAD] Gradient norm: 0.6711
+Epoch  60/250 | Loss: 0.5929 | Level Acc: 0.7486 | ARI: 0.8118 | Time: 157.5s
+Epoch  70/250 | Loss: 0.5534 | Level Acc: 0.7670 | ARI: 0.8514 | Time: 164.7s
+  [GRAD] Gradient norm: 1.7425
+Epoch  80/250 | Loss: 0.4996 | Level Acc: 0.7690 | ARI: 0.8406 | Time: 176.9s
+Epoch  90/250 | Loss: 0.4790 | Level Acc: 0.7677 | ARI: 0.8299 | Time: 179.7s
+Epoch 100/250 | Loss: 0.4250 | Level Acc: 0.7675 | ARI: 0.8264 | Time: 120.1s
+  [CHECKPOINT] Saved at epoch 100
+  [METRICS] Level Accuracy: 0.7675 | ARI: 0.8264
+  [GRAD] Gradient norm: 1.8236
+Epoch 110/250 | Loss: 0.3867 | Level Acc: 0.7786 | ARI: 0.8392 | Time: 178.9s
+Epoch 120/250 | Loss: 0.3654 | Level Acc: 0.7789 | ARI: 0.8302 | Time: 158.3s
+  [GRAD] Gradient norm: 0.6677
+Epoch 130/250 | Loss: 0.3467 | Level Acc: 0.7800 | ARI: 0.8191 | Time: 150.9s
+Epoch 140/250 | Loss: 0.3146 | Level Acc: 0.7800 | ARI: 0.8728 | Time: 164.2s
+Epoch 150/250 | Loss: 0.3073 | Level Acc: 0.7800 | ARI: 0.8411 | Time: 141.7s
+  [CHECKPOINT] Saved at epoch 150
+  [METRICS] Level Accuracy: 0.7800 | ARI: 0.8411
+  [GRAD] Gradient norm: 1.8659
+Epoch 160/250 | Loss: 0.2830 | Level Acc: 0.7800 | ARI: 0.8434 | Time: 142.2s
+Epoch 170/250 | Loss: 0.2564 | Level Acc: 0.7800 | ARI: 0.8547 | Time: 132.9s
+  [GRAD] Gradient norm: 0.8493
+Epoch 180/250 | Loss: 0.2361 | Level Acc: 0.7800 | ARI: 0.8581 | Time: 147.9s
+Epoch 190/250 | Loss: 0.2282 | Level Acc: 0.7800 | ARI: 0.8792 | Time: 156.3s
+Epoch 200/250 | Loss: 0.2013 | Level Acc: 0.7800 | ARI: 0.8838 | Time: 132.3s
+  [CHECKPOINT] Saved at epoch 200
+  [METRICS] Level Accuracy: 0.7800 | ARI: 0.8838
+  [GRAD] Gradient norm: 1.5170
+Epoch 210/250 | Loss: 0.1823 | Level Acc: 0.7800 | ARI: 0.8517 | Time: 178.7s
+Epoch 220/250 | Loss: 0.1783 | Level Acc: 0.7800 | ARI: 0.8735 | Time: 170.8s
+  [GRAD] Gradient norm: 0.5019
+Epoch 230/250 | Loss: 0.1451 | Level Acc: 0.7800 | ARI: 0.8505 | Time: 144.9s
+Epoch 240/250 | Loss: 0.1471 | Level Acc: 0.7800 | ARI: 0.8821 | Time: 129.9s
+Epoch 250/250 | Loss: 0.1141 | Level Acc: 0.7800 | ARI: 0.8770 | Time: 172.4s
+  [CHECKPOINT] Saved at epoch 250
+  [METRICS] Level Accuracy: 0.7800 | ARI: 0.8770
+  [GRAD] Gradient norm: 1.7448
+
+================================================================================
+Training completed
+Final Loss: 0.1329
+Final Level Accuracy: 0.7452
+Final ARI: 0.8770
+Total Training Time: 10.42 hours
+================================================================================
