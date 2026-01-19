@@ -1,0 +1,42 @@
+Training started at 2026-01-30 00:44:03.304170
+Seed: 9
+Config: kitti_production.yaml
+================================================================================
+Epoch   1/250 | Loss: 0.8972 | Level Acc: 0.7370 | Time: 155.9s
+Epoch   2/250 | Loss: 0.8778 | Level Acc: 0.7262 | Time: 126.1s
+Epoch   3/250 | Loss: 0.8818 | Level Acc: 0.7353 | Time: 177.7s
+Epoch   4/250 | Loss: 0.8572 | Level Acc: 0.7297 | Time: 162.7s
+Epoch   5/250 | Loss: 0.8481 | Level Acc: 0.7248 | Time: 168.0s
+Epoch  10/250 | Loss: 0.8187 | Level Acc: 0.7400 | Time: 169.2s
+Epoch  20/250 | Loss: 0.7431 | Level Acc: 0.7271 | Time: 137.7s
+Epoch  30/250 | Loss: 0.6593 | Level Acc: 0.7372 | Time: 127.9s
+Epoch  40/250 | Loss: 0.5957 | Level Acc: 0.7307 | Time: 142.2s
+Epoch  50/250 | Loss: 0.5470 | Level Acc: 0.7482 | Time: 142.2s
+  Checkpoint saved at epoch 50
+Epoch  60/250 | Loss: 0.4921 | Level Acc: 0.7375 | Time: 177.4s
+Epoch  70/250 | Loss: 0.4398 | Level Acc: 0.7491 | Time: 121.1s
+Epoch  80/250 | Loss: 0.4120 | Level Acc: 0.7387 | Time: 145.8s
+Epoch  90/250 | Loss: 0.3694 | Level Acc: 0.7555 | Time: 127.4s
+Epoch 100/250 | Loss: 0.3369 | Level Acc: 0.7500 | Time: 161.4s
+  Checkpoint saved at epoch 100
+Epoch 110/250 | Loss: 0.3079 | Level Acc: 0.7334 | Time: 152.4s
+Epoch 120/250 | Loss: 0.2628 | Level Acc: 0.7593 | Time: 130.2s
+Epoch 130/250 | Loss: 0.2339 | Level Acc: 0.7573 | Time: 166.9s
+Epoch 140/250 | Loss: 0.2238 | Level Acc: 0.7405 | Time: 130.9s
+Epoch 150/250 | Loss: 0.1908 | Level Acc: 0.7508 | Time: 170.3s
+  Checkpoint saved at epoch 150
+Epoch 160/250 | Loss: 0.1769 | Level Acc: 0.7687 | Time: 157.6s
+Epoch 170/250 | Loss: 0.1665 | Level Acc: 0.7666 | Time: 136.1s
+Epoch 180/250 | Loss: 0.1499 | Level Acc: 0.7737 | Time: 140.4s
+Epoch 190/250 | Loss: 0.1287 | Level Acc: 0.7658 | Time: 178.6s
+Epoch 200/250 | Loss: 0.1293 | Level Acc: 0.7745 | Time: 130.9s
+  Checkpoint saved at epoch 200
+Epoch 210/250 | Loss: 0.1018 | Level Acc: 0.7709 | Time: 127.9s
+Epoch 220/250 | Loss: 0.0899 | Level Acc: 0.7616 | Time: 165.3s
+Epoch 230/250 | Loss: 0.0833 | Level Acc: 0.7800 | Time: 143.8s
+Epoch 240/250 | Loss: 0.0777 | Level Acc: 0.7800 | Time: 166.4s
+Epoch 250/250 | Loss: 0.0800 | Level Acc: 0.7800 | Time: 175.8s
+  Checkpoint saved at epoch 250
+================================================================================
+Training completed at 2026-01-30 00:44:03.305307
+Final Level Accuracy: 0.7377
