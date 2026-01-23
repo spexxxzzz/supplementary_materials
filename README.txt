@@ -1,13 +1,31 @@
-Supplementary Code for ICML 2026 Submission
-"When Do Geometric Priors Help Hierarchical Perception? A Scale and Density-Dependent Analysis with Lorentzian Worldline Attention"
+# Supplementary Material: Lorentzian Worldline Attention (LoCo)
 
-Configured for Cluster-B. Update paths in src/utils/cluster_config.py before running.
+This repository contains the implementation, experiment configurations, and raw logs for the paper "When Do Geometric Priors Help Hierarchical Perception?".
 
-Quick Start:
-1. Install dependencies: pip install -r requirements_frozen_cluster.txt
-2. Update cluster_config.py with your paths
-3. Run training: bash scripts/train_dist.sh configs/base_models/kitti_production.yaml
+## Directory Structure
+- /src: Core implementation of LoCo and baselines (Euclidean, Hyperbolic).
+  - Note: /src/models/loco.py is the clean implementation. /src/models/loco_final_maybe.py contains the experimental binding logic used for Table 3 results.
+- /configs: Hydra configuration files.
+  - /configs/seeds: Exact configs for reproducing the 70 main results.
+  - /configs/grid_searches: Hyperparameter sweeps for rho thresholds.
+- /logs_archive: Raw stdout captures from the training cluster (Node-4/Node-8).
 
-For evaluation: bash scripts/eval_all.sh
+## Usage
+Dependencies are listed in `requirements_frozen_cluster.txt`.
+NOTE: This snapshot captures the environment on the university cluster (CUDA 11.8).
 
-Note: KITTI dataset requires /data/shared/kitti_meta_v4.csv (update path in kitti_loader.py)
+To verify the Euclidean Collapse (Figure 2), run:
+python src/experimental_junk/verify_minkowski.py
+
+To run training, you must update the data paths in `src/utils/cluster_config.py`.
+Current paths point to: /mnt/ssd_raid_0/neel_data/
+
+## Data Preparation
+Due to size constraints (540GB+), the full preprocessed KITTI-3DParts and ShapeNet-Level3 datasets are hosted on our internal cluster. 
+
+We have provided a `download_sample_data.sh` script to fetch a 1GB mini-batch for verification.
+*Note: The external download link has been disabled for anonymity. Please refer to `data/samples/` for structure verification.*
+
+## Pretrained Models
+Checkpoints in /checkpoints are stripped of optimizer states to save space.
+Full checkpoints (312M params) are available upon request.
